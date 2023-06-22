@@ -1,0 +1,189 @@
+[
+    {
+      "Price": 29999,
+      "Network": "2G, 3G, 4G",
+      "RAM": "1 GB",
+      "ROM": "32 GB",
+      "Processor": "Dual-core, 1.4 GHz",
+      "OperatingSystem": "iOS 8, upgradable to iOS 12.4.6",
+      "Chipset": "Apple A8 (20 nm)",
+      "picture":"https://i.ibb.co/h2JHSFX/iPhone6.jpg",
+      "name": "iPhone 6"
+    },
+    {
+      "Price": 44999,
+      "Network": "2G, 3G, 4G",
+      "RAM": "2 GB",
+      "ROM": "32 GB",
+      "Processor": "Dual-core, 1.84 GHz",
+      "OperatingSystem": "iOS 9, upgradable to iOS 13.4",
+      "Chipset": "Apple A9 (14 nm)",
+      "picture": "https://i.ibb.co/7XyPfvS/i-Phone6-Plus.jpg",
+      "name": "iPhone 6 Plus"
+    },
+    {
+      "Price": 43999,
+      "Network": "2G, 3G, 4G",
+      "RAM": "2 GB",
+      "ROM": "128 GB",
+      "Processor": "Quad-core, 2.34 GHz",
+      "OperatingSystem": "iOS 10.0.1, upgradable to iOS 13.4",
+      "Chipset": "Apple A10 Fusion (16 nm)",
+      "picture": "https://i.ibb.co/9vyDQyX/iPhone7.jpg",
+      "name": "iPhone 7"
+    },
+    {
+      "Price": 47999,
+      "Network": "2G, 3G, 4G",
+      "RAM": "4 GB",
+      "ROM": "128 GB",
+      "Processor": "Quad-core, 2.34 GHz",
+      "OperatingSystem": "iOS 10.0.1, upgradable to iOS 13.4",
+      "Chipset": "Apple A10 Fusion (16 nm)",
+      "picture":"https://i.ibb.co/vP5NYxh/i-Phone7-Plus.jpg",
+      "name": "iPhone 7 Plus"
+    },
+    {
+      "Price": 84999,
+      "Network": "2G, 3G, 4G",
+      "RAM": "3 GB",
+      "ROM": "64 GB",
+      "Processor": "Hexa-core",
+      "OperatingSystem": "iOS 11, upgradable to iOS 13.4",
+      "Chipset": "Apple A11 Bionic (10 nm)",
+      "picture": "https://i.ibb.co/MBXzZ5L/i-Phone8-Plus.jpg",
+      "name": "iPhone 8 Plus"
+    },
+    {
+      "Price": 99999,
+      "Network": "2G, 3G, 4G",
+      "RAM": "4 GB",
+      "ROM": "256 GB",
+      "Processor": "Hexa-core",
+      "OperatingSystem": "iOS 13, upgradable to iOS 13.4",
+      "Chipset": "Apple A13 Bionic (7 nm+)",
+      "picture": "https://i.ibb.co/VmrrcFN/iPhone11.jpg",
+      "name": "iPhone 11"
+    },
+    {
+      "Price": 159999,
+      "Network": "2G, 3G, 4G, 6g, 12g",
+      "RAM": "12 GB",
+      "ROM": "512 GB",
+      "Processor": "Hexa-core, up to 2.65 GHz",
+      "OperatingSystem": "iOS 13, upgradable to iOS 13.4",
+      "Chipset": "Apple A13 Bionic (7 nm+)",
+      "picture": "https://i.ibb.co/LZpyvKN/i-Phone11-Pro.jpg",
+      "name": "iPhone 11 pro"
+    },
+    {
+      "Price": 169999,
+      "Network": "2G, 3G, 4G, 6g, 12g",
+      "RAM": "12 GB",
+      "ROM": "512 GB",
+      "Processor": "Hexa-core, up to 2.65 GHz",
+      "OperatingSystem": "iOS 13, upgradable to iOS 13.4",
+      "Chipset": "Apple A13 Bionic (7 nm+)",
+      "picture": "https://i.ibb.co/sHVKmKc/iphone11-Pro-Max.jpg" ,
+      "name": "iPhone 11 pro Max"
+    },
+    {
+      "Price": 124999,
+      "Network": "2G, 3G, 4G, 6g, 12g",
+      "RAM": "6 GB",
+      "ROM": "128 GB",
+      "Processor": "Hexa-core, up to 2.65 GHz",
+      "OperatingSystem": "iOS 14",
+      "Chipset": "Apple A14 Bionic (5 nm)",
+      "picture":"https://i.ibb.co/nBZbK8X/iPhoen12.jpg",
+      "name": "iPhone 12"
+    },
+    {
+      "Price": 146999,
+      "Network": "2G, 3G, 4G, 6g, 12g",
+      "RAM": "6 GB",
+      "ROM": "128 GB",
+      "Processor": "Hexa-core, up to 2.65 GHz",
+      "OperatingSystem": "iOS 14",
+      "Chipset": "Apple A14 Bionic (5 nm)",
+      "picture": "https://i.ibb.co/v4yDhMV/i-Phone12-Pro.jpg",
+      "name": "iPhone 12 Pro"
+    },
+    {
+      "Price": 161999,
+      "Network": "2G, 3G, 4G, 6g, 12g",
+      "RAM": "6 GB",
+      "ROM": "128 GB",
+      "Processor": "Hexa-core, up to 2.65 GHz",
+      "OperatingSystem": "iOS 14",
+      "Chipset": "Apple A14 Bionic (5 nm)",
+      "picture": "https://i.ibb.co/vDZdwWc/i-Phone12-Pro-Max.jpg",
+      "name": "iPhone 12 Pro Max"
+    },
+    {
+      "Price": 133499,
+      "Network": "2G, 3G, 4G, 6g, 12g",
+      "RAM": "6 GB",
+      "ROM": "256 GB",
+      "Processor": "Hexa-core, up to 2.65 GHz",
+      "OperatingSystem": "iOS 14",
+      "Chipset": "Apple A14 Bionic (5 nm)",
+      "picture": "https://i.ibb.co/h8Mj72t/iPhone13.jpg",
+      "name": "iPhone 13"
+    },
+    {
+      "Price": 162999,
+      "Network": "2G, 3G, 4G, 6g, 12g",
+      "RAM": "6 GB",
+      "ROM": "256 GB",
+      "Processor": "Hexa-core, up to 2.65 GHz",
+      "OperatingSystem": "iOS 14",
+      "Chipset": "Apple A14 Bionic (5 nm)",
+      "picture": "https://i.ibb.co/R9htCJZ/i-Phone13-Pro.jpg",
+      "name": "iPhone 13 Pro"
+    },
+    {
+      "Price": 176999,
+      "Network": "2G, 3G, 4G, 6g, 12g",
+      "RAM": "6 GB",
+      "ROM": "256 GB",
+      "Processor": "Hexa-core, up to 2.65 GHz",
+      "OperatingSystem": "iOS 14",
+      "Chipset": "Apple A14 Bionic (5 nm)",
+      "picture": "https://i.ibb.co/Qn6MQrj/i-Phone13-Pro-Max.jpg",
+      "name": "iPhone 13 Pro Max"
+    },
+    {
+      "Price": 165299,
+      "Network": "2G, 3G, 4G, 6g, 12g",
+      "RAM": "6 GB",
+      "ROM": "256 GB",
+      "Processor": "Hexa-core, up to 2.65 GHz",
+      "OperatingSystem": "iOS 14",
+      "Chipset": "Apple A14 Bionic (5 nm)",
+      "picture": "https://i.ibb.co/vhg8tFf/iPhone14.jpg",
+      "name": "iPhone 14"
+    },
+    {
+      "Price": 237299,
+      "Network": "2G, 3G, 4G, 6g, 12g",
+      "RAM": "6 GB",
+      "ROM": "512 GB",
+      "Processor": "Hexa-core, up to 2.65 GHz",
+      "OperatingSystem": "iOS 14",
+      "Chipset": "Apple A14 Bionic (5 nm)",
+      "picture": "https://i.ibb.co/CHbMcbY/i-Phone14-Pro.jpg",
+      "name": "iPhone 14 Pro"
+    },
+    {
+      "Price": 255299,
+      "Network": "2G, 3G, 4G, 6g, 12g",
+      "RAM": "6 GB",
+      "ROM": "512 GB",
+      "Processor": "Hexa-core, up to 2.65 GHz",
+      "OperatingSystem": "iOS 14",
+      "Chipset": "Apple A14 Bionic (5 nm)",
+      "picture": "https://i.ibb.co/JxvGSNc/i-Phone14-Pro-Max.jpg" ,
+      "name": "iPhone 14 Pro Max"
+    }
+  ]
