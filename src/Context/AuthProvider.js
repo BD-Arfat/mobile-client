@@ -1,8 +1,8 @@
-import React, { createContext, useState } from 'react';
-import { createUserWithEmailAndPassword, getAuth } from "firebase/auth";
+import React, { createContext, useEffect, useState } from 'react';
+import { GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import app from '../Fairebase/Fairebase.init';
 
-const AuthContext = createContext();
+export const AuthContext = createContext();
 const auth = getAuth(app);
 
 const AuthProvider = ({ children }) => {
@@ -11,11 +11,40 @@ const AuthProvider = ({ children }) => {
     const [loding, setLoding] = useState(true);
 
     const createUser = (email, password) => {
+        setLoding(true)
         return createUserWithEmailAndPassword(auth, email, password);
+    };
+    const loginUser = (email, password) =>{
+        setLoding(true)
+        return signInWithEmailAndPassword(auth, email, password)
+    };
+    const provider = new GoogleAuthProvider();
+    const googleUser = () =>{
+        signInWithPopup(auth, provider)
+    };
+
+    useEffect(()=>{
+        const unsubscribe = onAuthStateChanged(auth, currentUser =>{
+            setUser(currentUser)
+            setLoding(false)
+        })
+        return()=>{
+            unsubscribe ()
+        }
+    },[]);
+
+    const logout = () =>{
+        setLoding(true)
+        return signOut(auth)
+        
+    }
+
+    const updateUser = (userInfo) =>{
+        return updateProfile(user, userInfo)
     }
 
     const authInfo = {
-        user, loding, createUser
+        user, loding, createUser,loginUser,googleUser,logout,updateUser, loding
     }
 
     return (

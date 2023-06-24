@@ -5,6 +5,11 @@ import Home from "../Pages/Home/Home/Home";
 import Products from "../Products/Products";
 import Login from "../../Login/Login";
 import Register from "../../Register/Register";
+import PrivetRouts from "../../PrivetRouts/PrivetRouts";
+import Dashbord from "../Dashbord/Dashbord";
+import DashbordLaout from "../DashbordLaout/DashbordLaout";
+import MyOrders from "../DashbordLaout/MyOrders/MyOrders";
+import AllUsers from "../DashbordLaout/AllUsers/AllUsers";
 
 export const router = createBrowserRouter([
     {
@@ -17,7 +22,7 @@ export const router = createBrowserRouter([
             },
             {
                 path : '/products',
-                element : <Products/>
+                element : <PrivetRouts><Products/></PrivetRouts>
             }
         ]
     },
@@ -32,6 +37,20 @@ export const router = createBrowserRouter([
             {
                 path : '/register',
                 element : <Register/>
+            }
+        ]
+    },
+    {
+        path : '/dashbord',
+        element: <PrivetRouts><DashbordLaout></DashbordLaout></PrivetRouts>,
+        children : [
+            {
+                path : '/dashbord',
+                element : <MyOrders></MyOrders>
+            },
+            {
+                path : '/dashbord/users',
+                element : <AllUsers/>
             }
         ]
     }

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Product = ({product}) => {
+const Product = ({ product, setModalProducts }) => {
     return (
         <div className="card bg-base-100 shadow-2xl py-7 rounded-2xl border-2 border-black mt-5">
             <figure className="px-10 pt-10">
@@ -22,9 +22,11 @@ const Product = ({product}) => {
                     <h1><span className='text-success'>OperatingSystem</span> : {product.OperatingSystem}</h1>
                 </div>
             </div>
-            <div className="w-full text-center">
-                <button className="btn btn-neutral w-80 mx-auto">Buy Now</button>
+            <div onClick={() => setModalProducts(product)} className="w-full text-center">
+                <button className="btn btn-neutral w-80 mx-auto" onClick={() => window.my_modal_3.showModal()}>open modal</button>
+
             </div>
+
         </div>
     );
 };
