@@ -10,6 +10,7 @@ import Dashbord from "../Dashbord/Dashbord";
 import DashbordLaout from "../DashbordLaout/DashbordLaout";
 import MyOrders from "../DashbordLaout/MyOrders/MyOrders";
 import AllUsers from "../DashbordLaout/AllUsers/AllUsers";
+import AdminRouts from "../../PrivetRouts/AdminRouts/AdminRouts";
 
 export const router = createBrowserRouter([
     {
@@ -50,7 +51,7 @@ export const router = createBrowserRouter([
             },
             {
                 path : '/dashbord/users',
-                element : <AllUsers/>
+                element : <AdminRouts><AllUsers/></AdminRouts>
             }
         ]
     }

@@ -8,7 +8,7 @@ const MyOrders = () => {
 
     const url = `http://localhost:5000/orders?email=${user?.email}`
 
-    const {data: orders = []} = useQuery({
+    const {data: orders = [], refetch} = useQuery({
         queryKey : [`orders`,user?.email],
         queryFn : async ()=>{
             const res = await fetch(url, {
@@ -29,8 +29,8 @@ const MyOrders = () => {
             })
             .then(res=>res.json())
             .then(data=> {
-                console.log(data);
-                if(data.deletecount > 0){
+                if(data.deletedCount > 0){
+                    refetch()
                     toast.success('The Order you want to delete has been successfully deleted')
                 }
             })
@@ -59,7 +59,7 @@ const MyOrders = () => {
                     </thead>
                     <tbody>
                         {/* row 1 */}
-                        {
+                        { orders &&
                             orders.map((order, i) =><tr key={order._id} className="bg-base-200">
                             <th>{i+1}</th>
                             <td>{order.Name}</td>
@@ -68,7 +68,7 @@ const MyOrders = () => {
                             <td>{order.price}</td>
                             <td>{order.phone}</td>
                             <td>{order.location}</td>
-                            <button onClick={(_id)=>handelDelete(_id)} className='btn btn-sm btn-error'>Delete</button>
+                            <button onClick={()=>handelDelete(order._id)} className='btn btn-sm btn-error'>Delete</button>
                         </tr>)
                         }
                     </tbody>
