@@ -11,6 +11,7 @@ import DashbordLaout from "../DashbordLaout/DashbordLaout";
 import MyOrders from "../DashbordLaout/MyOrders/MyOrders";
 import AllUsers from "../DashbordLaout/AllUsers/AllUsers";
 import AdminRouts from "../../PrivetRouts/AdminRouts/AdminRouts";
+import Payment from "../DashbordLaout/Payment/Payment";
 
 export const router = createBrowserRouter([
     {
@@ -52,6 +53,11 @@ export const router = createBrowserRouter([
             {
                 path : '/dashbord/users',
                 element : <AdminRouts><AllUsers/></AdminRouts>
+            },
+            {
+                path : '/dashbord/payment/:id',
+                element : <AdminRouts><Payment/></AdminRouts>,
+                loader : ({params}) => fetch(`http://localhost:5000/orders/${params.id}`)
             }
         ]
     }

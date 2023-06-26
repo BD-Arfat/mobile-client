@@ -2,13 +2,14 @@ import React, { useContext } from 'react';
 import { AuthContext } from '../../../Context/AuthProvider';
 import { useQuery } from 'react-query';
 import { toast } from 'react-hot-toast';
+import { Link } from 'react-router-dom';
 
 const MyOrders = () => {
     const {user} = useContext(AuthContext);
 
     const url = `http://localhost:5000/orders?email=${user?.email}`
 
-    const {data: orders = [], refetch} = useQuery({
+    const {data: orders=[], refetch} = useQuery({
         queryKey : [`orders`,user?.email],
         queryFn : async ()=>{
             const res = await fetch(url, {
@@ -55,11 +56,11 @@ const MyOrders = () => {
                             <th>Phone-Number</th>
                             <th>location</th>
                             <th>Delete</th>
+                            <th>Payment</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {/* row 1 */}
-                        { orders &&
+                        { 
                             orders.map((order, i) =><tr key={order._id} className="bg-base-200">
                             <th>{i+1}</th>
                             <td>{order.Name}</td>
@@ -68,7 +69,15 @@ const MyOrders = () => {
                             <td>{order.price}</td>
                             <td>{order.phone}</td>
                             <td>{order.location}</td>
-                            <button onClick={()=>handelDelete(order._id)} className='btn btn-sm btn-error'>Delete</button>
+                            <td><button onClick={()=>handelDelete(order._id)} className='btn btn-sm btn-error'>Delete</button></td>
+                            <td>
+                            {order.price && !order.paid &&
+                                <Link to={`/dashbord/payment/${order._id}`}><button className='btn btn-sm btn-info'>Payment</button></Link>
+                            }
+                            {
+                                order.price && order.paid && <span className=' text-green-700 text-center font-bold'>paid</span>
+                            }
+                            </td>
                         </tr>)
                         }
                     </tbody>

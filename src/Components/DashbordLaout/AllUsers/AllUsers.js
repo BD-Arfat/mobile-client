@@ -27,6 +27,23 @@ const AllUsers = () => {
                 refetch()
             }
         })
+    };
+
+    const handelDelete = (id) => {
+        const proceeed = window.confirm(`Do you really want to delete this user?`);
+        if(proceeed){
+            fetch(`http://localhost:5000/users/${id}`, {
+                method : 'DELETE'
+            })
+            .then(res=>res.json())
+            .then(data=> {
+                if(data.deletedCount > 0){
+                    refetch()
+                    toast.success('The user you want to delete has been successfully deleted')
+                }
+            })
+           
+        }
     }
 
     return (
@@ -53,7 +70,7 @@ const AllUsers = () => {
                                 <td>{user.name}</td>
                                 <td>{user.email}</td>
                                 <td>{ user?.role !== 'admin' && <button onClick={()=>handleMakeAdmin(user._id)} className='btn btn-success btn-sm'>Admin</button>}</td>
-                                <td><button className='btn btn-error btn-sm'>Delete</button></td>
+                                <td><button onClick={()=>handelDelete(user._id)} className='btn btn-error btn-sm'>Delete</button></td>
                             </tr>)
                         }
                     </tbody>
