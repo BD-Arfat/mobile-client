@@ -26,7 +26,7 @@ const BookingModal = ({ modalProudcts, setModalProducts }) => {
         };
 
 
-        fetch(`http://localhost:5000/order`, {
+        fetch(`  https://mobile-server-bd-arfat.vercel.app/order`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

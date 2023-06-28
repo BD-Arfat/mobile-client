@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Context/AuthProvider';
 import { toast } from 'react-hot-toast';
 import useToken from '../Hooks/UseToken';
+import { GoogleAuthProvider } from 'firebase/auth';
 
 const Register = () => {
     const { register, handleSubmit } = useForm();
@@ -25,13 +26,13 @@ const Register = () => {
         createUser(data.email, data.password)
         .then(result=> {
             const user = result.user;
-            console.log(user);
+            saveUser(data.name, data.email)
             const userInfo = {
                 displayName : data.name
             }
             updateUser(userInfo)
             .then(()=>{
-               saveUser(data.name, data.email)
+               
             })
             .catch(error => {
                 console.log(error)
@@ -43,21 +44,9 @@ const Register = () => {
         })
     }
 
-    const handelGoogleSubmit = () =>{
-        googleUser()
-        .then(result => {
-            const user = result.user;
-            console.log(user)
-        })
-        .catch(error =>{
-            console.error(error)
-            toast.error(error.message)
-        })
-    }
-
     const saveUser = (name, email) =>{
         const user = {name,email};
-        fetch(`http://localhost:5000/users`, {
+        fetch(`  https://mobile-server-bd-arfat.vercel.app/users`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -97,10 +86,8 @@ const Register = () => {
                         </label>
                         <input type="password" {...register("password")} className="input input-bordered input-primary w-96" required/>
                     </div>
-                    <input className='mt-4 w-96 btn btn-neutral' type="submit" />
                     <p className='mt-4'>Have you already registered? <Link to={'/login'} className='font-bold'>Login</Link></p>
-                    <div className="divider">OR</div>
-                    <button onClick={handelGoogleSubmit} className='btn btn-neutral btn-outline w-96'>You register with Google</button>
+                    <input className='mt-4 w-96 btn btn-neutral' type="submit" />
                 </form>
             </div>
         </div>

@@ -12,6 +12,7 @@ import MyOrders from "../DashbordLaout/MyOrders/MyOrders";
 import AllUsers from "../DashbordLaout/AllUsers/AllUsers";
 import AdminRouts from "../../PrivetRouts/AdminRouts/AdminRouts";
 import Payment from "../DashbordLaout/Payment/Payment";
+import Abouts from "../Abouts/Abouts";
 
 export const router = createBrowserRouter([
     {
@@ -37,6 +38,10 @@ export const router = createBrowserRouter([
                 element : <Login/>
             },
             {
+                path : '/abouts',
+                element : <Abouts/>
+            },
+            {
                 path : '/register',
                 element : <Register/>
             }
@@ -56,8 +61,8 @@ export const router = createBrowserRouter([
             },
             {
                 path : '/dashbord/payment/:id',
-                element : <AdminRouts><Payment/></AdminRouts>,
-                loader : ({params}) => fetch(`http://localhost:5000/orders/${params.id}`)
+                element : <Payment/>,
+                loader : ({params}) => fetch(`  https://mobile-server-bd-arfat.vercel.app/orders/${params.id}`)
             }
         ]
     }

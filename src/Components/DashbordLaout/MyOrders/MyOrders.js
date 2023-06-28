@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 const MyOrders = () => {
     const {user} = useContext(AuthContext);
 
-    const url = `http://localhost:5000/orders?email=${user?.email}`
+    const url = `  https://mobile-server-bd-arfat.vercel.app/orders?email=${user?.email}`
 
     const {data: orders=[], refetch} = useQuery({
         queryKey : [`orders`,user?.email],
@@ -25,7 +25,7 @@ const MyOrders = () => {
     const handelDelete = (id) =>{
         const proceeed = window.confirm(`Do you really want to delete this product?`);
         if(proceeed){
-            fetch(`http://localhost:5000/orders/${id}`, {
+            fetch(`  https://mobile-server-bd-arfat.vercel.app/orders/${id}`, {
                 method : 'DELETE'
             })
             .then(res=>res.json())

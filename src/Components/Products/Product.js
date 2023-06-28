@@ -23,7 +23,7 @@ const Product = ({ product, setModalProducts }) => {
                 </div>
             </div>
             <div onClick={() => setModalProducts(product)} className="w-full text-center">
-                <button className="btn btn-neutral w-80 mx-auto" onClick={() => window.my_modal_3.showModal()}>open modal</button>
+            {product &&<button className="btn btn-neutral w-80 mx-auto" onClick={()=>window.my_modal_3.showModal()}>Confirm order</button>}
 
             </div>
 

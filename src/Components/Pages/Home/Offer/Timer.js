@@ -34,7 +34,7 @@ class Timer extends React.Component {
       const { minutes, seconds, hours, days } = this.state;
       return (
         <div>
-          <h1 className='text-center font-bold p-8 text-6xl bg-green-900 md:p-10 md:text-7xl md:mx-9 md:rounded-2xl mx-4 rounded-lg mt-10 text-white'>
+          <h1 className='text-center font-bold p-8 text-5xl bg-green-900 md:p-10 md:text-7xl md:mx-9 md:rounded-2xl mx-4 rounded-lg mt-10 text-white'>
             {days < 10 ? `0${days}` : days}:{hours < 10 ? `0${hours}` : hours}:
             {minutes}:{seconds < 10 ? `0${seconds}` : seconds}
           </h1>

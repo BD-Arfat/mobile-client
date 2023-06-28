@@ -16,7 +16,7 @@ const Navbar = () => {
 
     const itmes = <>
         <li><Link to={'/'} className='font-bold text-lg'>Home</Link></li>
-        <li><Link className='font-bold text-lg'>Abouts</Link></li>
+        <li><Link to={'/abouts'} className='font-bold text-lg'>Abouts</Link></li>
         <li><Link to={'/products'} className='font-bold text-lg'>Products</Link></li>
         {
             user?.uid ?

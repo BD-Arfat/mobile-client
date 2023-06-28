@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Context/AuthProvider';
 import { toast } from 'react-hot-toast';
 import useToken from '../Hooks/UseToken';
+import { GoogleAuthProvider } from 'firebase/auth';
 
 const Login = () => {
     const { register, handleSubmit } = useForm();
@@ -33,17 +34,6 @@ const Login = () => {
 
     };
 
-    const handelGoogleSubmit = () =>{
-        googleUser()
-        .then(result => {
-            const user = result.user;
-            console.log(user)
-        })
-        .catch(error=>{
-            console.log(error)
-        })
-    }
-
     
 
     return (
@@ -65,10 +55,8 @@ const Login = () => {
                         </label>
                         <input type="password" {...register("password")}  className="input input-bordered input-primary w-96" required/>
                     </div>
-                    <input className='mt-4 w-96 btn btn-neutral' type="submit" />
                     <p className='mt-4'>Have you not registered yet? <Link to={'/register'} className='font-bold'>Register</Link></p>
-                    <div className="divider">OR</div>
-                    <button onClick={handelGoogleSubmit} className='btn btn-neutral btn-outline w-96'>You login with Google</button>
+                    <input className='mt-4 w-96 btn btn-neutral' type="submit" />
                 </form>
             </div>
         </div>

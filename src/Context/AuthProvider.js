@@ -18,11 +18,7 @@ const AuthProvider = ({ children }) => {
         setLoding(true)
         return signInWithEmailAndPassword(auth, email, password)
     };
-    const provider = new GoogleAuthProvider();
-    const googleUser = () =>{
-        signInWithPopup(auth, provider)
-    };
-
+    
     useEffect(()=>{
         const unsubscribe = onAuthStateChanged(auth, currentUser =>{
             setUser(currentUser)
@@ -44,7 +40,7 @@ const AuthProvider = ({ children }) => {
     }
 
     const authInfo = {
-        user, loding, createUser,loginUser,googleUser,logout,updateUser, loding
+        user, loding, createUser,loginUser,logout,updateUser, loding
     }
 
     return (
