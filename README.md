@@ -37,7 +37,7 @@ My website name is :  Mobile Shop website.
 🖥 𝐇𝐨𝐰 𝐭𝐨 𝐛𝐮𝐲 𝐩𝐫𝐨𝐝𝐮𝐜𝐭𝐬 𝐟𝐫𝐨𝐦 𝐨𝐮𝐫 𝐰𝐞𝐛𝐬𝐢𝐭𝐞
 1) First you need to go to the product page
 2) You will see many mobiles there
-3) You will see one (Confirm Order) among the products, you have to click there
+3) You will see one (Confirm Order) Button among the products, you have to click there
 4) Then you will get the order
 5) Then go to the dashboard, then click on the payment option from my order and make the payment
 
