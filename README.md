@@ -11,7 +11,6 @@
 4) Authenticated User can Add products
 5) He/she can make a Product
 6) He/she can change product status and delete from Wishlist
-7) Here Firebase is used for login and I have used dark and light mood here. And fully responsive
 
 <h2>Technology used:</h2>
 
