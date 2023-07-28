@@ -5,7 +5,7 @@ import { AuthContext } from '../../Context/AuthProvider';
 const Navbar = () => {
 
     const { user, logout } = useContext(AuthContext);
-
+// Logout Handel
     const handelLogout = () => {
         logout()
             .then(() => { })
@@ -25,6 +25,7 @@ const Navbar = () => {
                 null}
     </>
     return (
+        // Start Navbar
         <div className="navbar bg-base-100 shadow-2xl lg:px-10 lg:mx-auto">
             <div className="navbar-start">
                 <div className="dropdown">
