@@ -2,6 +2,7 @@ import React from 'react';
 
 const Abouts = () => {
     return (
+        // this is Our About section
         <div>
             <h1 className='text-center font-bold mt-7 text-3xl md:mt-11 md:text4xl'>All rules of this website are written here</h1>
             <div>
